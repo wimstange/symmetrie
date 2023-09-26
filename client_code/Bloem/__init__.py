@@ -14,7 +14,7 @@ class Bloem(BloemTemplate):
  
         self.teken_bloem(self.text_box_1.text,
                          self.text_box_2.text,
-                         1,
+                         self.text_box_3.text,
                          self.text_box_4.text,
                          self.text_box_5.text)
 
@@ -23,7 +23,7 @@ class Bloem(BloemTemplate):
         pass
         
         
-    def teken_bloem(self,a,b,d,m,n):
+    def teken_bloem(self,a,b,c,m,n):
         cv = self.canvas_1
         cv.stroke_style = "#2196F3"
         cv.line_width = 3
@@ -31,20 +31,12 @@ class Bloem(BloemTemplate):
         cv.begin_path()
         cv.move_to(100,100)
         for k in range(n):
+            cv.begin_path()
             t = 2 * k * math.pi / n
-            q = d * math.cos(m * t)
+            q = c * math.cos(m * t)
             r = a + b * math.cos(m * t  + q)
             x = r * math.cos(t)
             y = r * math.sin(t)
             cv.line_to(x,y)
-            cv.close_path()
             cv.stroke()
-  
-
-  
-        # cv.fill()
-        # cv.stroke()
-
-
-        
-
+            cv.close_path()
