@@ -11,11 +11,7 @@ class Bloem(BloemTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        print(self.text_box_1.text,
-                         self.text_box_2.text,
-                         self.text_box_3.text,
-                         self.text_box_4.text,
-                         self.text_box_5.text)
+ 
         self.teken_bloem(self.text_box_1.text,
                          self.text_box_2.text,
                          self.text_box_3.text,
@@ -29,14 +25,12 @@ class Bloem(BloemTemplate):
         
     def teken_bloem(self,a,b,c,m,n):
         cv = self.canvas_1
-        print(a,b,c,m,n)
-        # for k in range(n):
-        #    print(k)
-        
+      
         cv.begin_path()
         cv.move_to(100,100)
-        cv.line_to(100,200)
-        cv.line_to(200,200)
+        for i in range(n):
+            for j in range(n):
+                cv.line_to(i*a,j*b)
         cv.close_path()
   
         cv.stroke_style = "#2196F3"
