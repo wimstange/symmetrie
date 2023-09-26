@@ -53,7 +53,7 @@ components:
   - type: TextBox
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '1', font_size: null,
-      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: text_box_3
     layout_properties: {width: 47.80699999999999}
@@ -85,7 +85,7 @@ components:
       background: '', bold: false, underline: false}
     name: text_box_5
     layout_properties: {width: 68.80699999999999}
-    event_bindings: {change: text_box_5_change}
+    event_bindings: {}
 - type: Canvas
   properties: {height: 674}
   name: canvas_1

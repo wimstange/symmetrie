@@ -6,38 +6,45 @@ class Bloem(BloemTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        self.N = self.text_box_5.text
+        
         # Any code you write here will run before the form opens.
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
+        print(self.text_box_1.text,
+                         self.text_box_2.text,
+                         self.text_box_3.text,
+                         self.text_box_4.text,
+                         self.text_box_5.text)
+        self.teken_bloem(self.text_box_1.text,
+                         self.text_box_2.text,
+                         self.text_box_3.text,
+                         self.text_box_4.text,
+                         self.text_box_5.text)
 
     def canvas_1_reset(self, **event_args):
         """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
-        c = self.canvas_1
-        for k in range(int(self.N)):
-            print(k)
+        pass
         
         
+    def teken_bloem(self,a,b,c,m,n):
+        cv = self.canvas_1
+        print(a,b,c,m,n)
+        # for k in range(n):
+        #    print(k)
         
-        
-        
-        c.begin_path()
-        c.move_to(100,100)
-        c.line_to(100,200)
-        c.line_to(200,200)
-        c.close_path()
+        cv.begin_path()
+        cv.move_to(100,100)
+        cv.line_to(100,200)
+        cv.line_to(200,200)
+        cv.close_path()
   
-        c.stroke_style = "#2196F3"
-        c.line_width = 3
-        c.fill_style = "#E0E0E0"
+        cv.stroke_style = "#2196F3"
+        cv.line_width = 3
+        cv.fill_style = "#E0E0E0"
   
-        c.fill()
-        c.stroke()
-
-    def text_box_5_change(self, **event_args):
-        """This method is called when the text in this text box is edited"""
-        self.N = self.text_box_5.text
+        cv.fill()
+        cv.stroke()
 
 
         
