@@ -28,15 +28,19 @@ class Bloem(BloemTemplate):
         cv.stroke_style = "#2196F3"
         cv.line_width = 3
         cv.fill_style = "#E0E0E0"      
-        cv.begin_path()
-        cv.move_to(100,100)
+        x , y = 100, 100
+       
+        
         for k in range(n):
             cv.begin_path()
             t = 2 * k * math.pi / n
             q = c * math.cos(m * t)
             r = a + b * math.cos(m * t  + q)
-            x = r * math.cos(t)
-            y = r * math.sin(t)
-            cv.line_to(x,y)
+            x_n = r * math.cos(t)
+            y_n = r * math.sin(t)
+            cv.move_to(x,y)
+            cv.line_to(x_n,y_n)
             cv.stroke()
-            cv.close_path()
+            # cv.close_path()
+            x, y = x_n, y_n
+            print(x,y)

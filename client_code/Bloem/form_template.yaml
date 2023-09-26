@@ -28,7 +28,7 @@ components:
       font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: text_box_1
-    layout_properties: {width: 37.80699999999999}
+    layout_properties: {width: 54.80699999999999}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'B= ', font_size: null, font: '', spacing_above: small,
@@ -42,7 +42,7 @@ components:
       font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: text_box_2
-    layout_properties: {width: 54.80699999999999}
+    layout_properties: {width: 87.80699999999999}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: "C= \n", font_size: null, font: '', spacing_above: small,
