@@ -12,24 +12,36 @@ class Bloem(BloemTemplate):
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
  
-        self.teken_bloem()
+        self.teken_bloem(self.text_box_1.text,
+                        self.text_box_2.text,
+                        self.text_box_3.text,
+                        self.text_box_4.text,
+                        self.text_box_5.text)
 
     def canvas_1_reset(self, **event_args):
         """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
-        self.teken_bloem()
+        self.teken_bloem(self.text_box_1.text,
+                        self.text_box_2.text,
+                        self.text_box_3.text,
+                        self.text_box_4.text,
+                        self.text_box_5.text)
         
         
-    def teken_bloem(self):
+    def teken_bloem(self,A,B,C,M,N):
         c = self.canvas_1
         c.begin_path()
-        c.move_to(100,100)
-        c.line_to(100,200)
-        c.line_to(200,200)
-        # c.close_path()
-  
         c.stroke_style = "#2196F3"
-        c.line_width = 3
-        c.fill_style = "#E0E0E0"
-  
-        # c.fill()
-        c.stroke()
+        c.line_width = 1
+        
+        for k in range(N):
+            T=2*k*math.pi/N
+            Q=C*math.cos(M*T)
+            R=A+B*math.cos(M*T+Q)
+            X=250+100*R*math.cos(T)
+            Y=250+100*R*math.sin(T)
+            if k==0:
+                c.move_to(X,Y)
+            else:
+                c.line_to(X,Y)
+                
+            c.stroke()
