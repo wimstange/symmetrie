@@ -29,6 +29,7 @@ class Bloem(BloemTemplate):
         
     def teken_bloem(self,A,B,C,M,N):
         c = self.canvas_1
+        c.clear_rect(0,0,self.canvas_1.get_width(),self.canvas_1.get_height()) 
         c.begin_path()
         c.stroke_style = "#2196F3"
         c.line_width = 1
