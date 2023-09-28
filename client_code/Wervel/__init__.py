@@ -25,6 +25,9 @@ class Wervel(WervelTemplate):
             Y.append(math.cos(T))
         for j in range(N):
             c.move_to(X[0],Y[0])
+            for k in range(1,M):
+                c.line_to(X[k],Y[k])
+            for l 
             
             
         
