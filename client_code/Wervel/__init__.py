@@ -23,8 +23,8 @@ class Wervel(WervelTemplate):
         C = math.sin(F)/(math.sin(A+F)+math.sin(A))
         for i in range(M):
             T = (2*i+1)*math.pi/M
-            X.append(500+5*math.sin(T))
-            Y.append(500+50*math.cos(T))
+            X.append(500+500*math.sin(T))
+            Y.append(500+500*math.cos(T))
         print(X,Y)
         for j in range(N):
             c.move_to(X[0],Y[0])
