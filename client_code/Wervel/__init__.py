@@ -23,8 +23,8 @@ class Wervel(WervelTemplate):
         C = math.sin(F)/(math.sin(A+F)+math.sin(A))
         for i in range(M):
             T = (2*i+1)*math.pi/M
-            X.append(50+50*math.sin(T))
-            Y.append(50+50*math.cos(T))
+            X.append(100+50*math.sin(T))
+            Y.append(100+50*math.cos(T))
         print(X,Y)
         for j in range(N):
             c.move_to(X[0],Y[0])
@@ -38,9 +38,7 @@ class Wervel(WervelTemplate):
                 X[l] = (X[l]*math.cos(A)-Y[l]*math.sin(A))*C
                 Y[l] = (Z   *math.sin(A)+Y[l]*math.cos(A))*C
              
-    def verschuif(self.p):
-        return([100+50*p[0],100+50*p[1]])
-    
+  
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         self.teken_wervel(self.text_box_1.text)
