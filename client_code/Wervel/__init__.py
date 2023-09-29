@@ -15,31 +15,32 @@ class Wervel(WervelTemplate):
         c.stroke_style = "#2196F3"
         c.line_width = 1
         X = []
-        A = 0.5
-        N = math.int(4*math.pi/(M*A))
+        Y = []
+        A = 0.05
+        N = int(4*math.pi/(M*A))
+        print("De waarde van N is: ", N)
         F = (M-2)*math.pi/M
         C = math.sin(F)/(math.sin(A+F)+math.sin(A))
         for i in range(M):
-            T = (2*I+1)*math.pi/M
-            X.append(math.sin(T))
-            Y.append(math.cos(T))
+            T = (2*i+1)*math.pi/M
+            X.append(50+50*math.sin(T))
+            Y.append(50+50*math.cos(T))
+        print(X,Y)
         for j in range(N):
             c.move_to(X[0],Y[0])
             for k in range(1,M):
+                print(j,k)
                 c.line_to(X[k],Y[k])
-            for l 
-            
-            
-        
-        for k in range(N):
-            T=2*k*math.pi/N
-            Q=C*math.cos(M*T)
-            R=A+B*math.cos(M*T+Q)
-            X=250+100*R*math.cos(T)
-            Y=250+100*R*math.sin(T)
-            if k==0:
-                c.move_to(X,Y)
-            else:
-                c.line_to(X,Y)
-                
+            c.close_path()
             c.stroke()
+            for l in range(M):
+                Z = X[l]
+                X[l] = (X[l]*math.cos(A)-Y[l]*math.sin(A))*C
+                Y[l] = (Z   *math.sin(A)+Y[l]*math.cos(A))*C
+             
+    def verschuif(self.p):
+        return([100+50*p[0],100+50*p[1]])
+    
+    def button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        self.teken_wervel(self.text_box_1.text)
