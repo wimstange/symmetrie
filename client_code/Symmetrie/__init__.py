@@ -3,6 +3,7 @@ from anvil import *
 #import the forms to be displayed
 from ..Bloem import Bloem
 from ..Wervel import Wervel
+
 class Symmetrie(SymmetrieTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
