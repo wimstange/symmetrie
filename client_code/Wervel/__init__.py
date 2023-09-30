@@ -24,12 +24,12 @@ class Wervel(WervelTemplate):
         for i in range(M):                            #   \
             T = (2*i+1)*math.pi/M                     #    \
                                                       #      coordinaten van de eerste veelhoek
-            X.append(500+250*math.sin(T))              #    /
-            Y.append(500+250*math.cos(T))              #   /
+            X.append(250*math.sin(T))              #    /
+            Y.append(250*math.cos(T))              #   /
         for j in range(N):
-            c.move_to(300+X[0],Y[0])
+            c.move_to(325+X[0],325+Y[0])
             for k in range(1,M):
-                c.line_to(300+X[k],Y[k])
+                c.line_to(325+X[k],325+Y[k])
             c.close_path()
             c.stroke()
             for l in range(M):
