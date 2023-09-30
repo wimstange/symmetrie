@@ -6,6 +6,7 @@ class Wervel(WervelTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
+        self.canvas_1.width = 2000
 
         # Any code you write here will run before the form opens.
     def teken_wervel(self,M):
@@ -18,19 +19,17 @@ class Wervel(WervelTemplate):
         Y = []
         A = 0.05
         N = int(4*math.pi/(M*A))
-        print("De waarde van N is: ", N)
         F = (M-2)*math.pi/M
         C = math.sin(F)/(math.sin(A+F)+math.sin(A))
-        for i in range(M):
-            T = (2*i+1)*math.pi/M
-            X.append(500+500*math.sin(T))
-            Y.append(500+500*math.cos(T))
-        print(X,Y)
+        for i in range(M):                            #   \
+            T = (2*i+1)*math.pi/M                     #    \
+                                                      #      coordinaten van de eerste veelhoek
+            X.append(500+250*math.sin(T))              #    /
+            Y.append(500+250*math.cos(T))              #   /
         for j in range(N):
-            c.move_to(X[0],Y[0])
+            c.move_to(300+X[0],Y[0])
             for k in range(1,M):
-                print(j,k)
-                c.line_to(X[k],Y[k])
+                c.line_to(300+X[k],Y[k])
             c.close_path()
             c.stroke()
             for l in range(M):
