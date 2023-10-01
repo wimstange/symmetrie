@@ -29,6 +29,14 @@ components:
       background: '', bold: false, underline: false}
     name: text_box_1
     layout_properties: {width: 82}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: download, font_size: null, font: '', spacing_above: none,
+      icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_2
+    layout_properties: {}
+    event_bindings: {click: button_2_click}
 - type: Canvas
   properties: {role: null, height: '2000', tooltip: '', border: '', foreground: '',
     visible: true, spacing_above: small, spacing_below: small, background: ''}

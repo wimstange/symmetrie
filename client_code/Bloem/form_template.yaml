@@ -86,6 +86,13 @@ components:
     name: text_box_5
     layout_properties: {width: 68.80699999999999}
     event_bindings: {}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: download, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_2
+    layout_properties: {}
 - type: Canvas
   properties: {height: 674}
   name: canvas_1

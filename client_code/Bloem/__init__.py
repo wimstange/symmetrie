@@ -19,7 +19,7 @@ class Bloem(BloemTemplate):
                         self.text_box_4.text,
                         self.text_box_5.text)
 
-      def button_2_click(self, **event_args):
+    def button_2_click(self, **event_args):
           """This method is called when the button is clicked"""
           img = self.canvas_1.get_image()
           anvil.media.download(img)
