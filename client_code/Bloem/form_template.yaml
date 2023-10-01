@@ -93,6 +93,7 @@ components:
       underline: false, icon: ''}
     name: button_2
     layout_properties: {}
+    event_bindings: {click: button_2_click}
 - type: Canvas
   properties: {height: 674}
   name: canvas_1

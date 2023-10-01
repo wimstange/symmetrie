@@ -1,5 +1,6 @@
 from ._anvil_designer import BloemTemplate
 from anvil import *
+import anvil.server
 import math
 import anvil.media
 
@@ -20,9 +21,13 @@ class Bloem(BloemTemplate):
                         self.text_box_5.text)
 
     def button_2_click(self, **event_args):
-          """This method is called when the button is clicked"""
-          img = self.canvas_1.get_image()
-          anvil.media.download(img)
+        """This method is called when the button is clicked"""
+        img = self.canvas_1.get_image()
+        filename = 'bloem.jpg'  # Hier kunt u de gewenste bestandsnaam instellen
+        anvil.server.call('save_image_with_name', img, filename)
+
+          # img = self.canvas_1.get_image()
+          # anvil.media.download(img)
 
     def canvas_1_reset(self, **event_args):
         """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""

@@ -1,0 +1,24 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: FlowPanel
+  properties: {}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'KPAVPY,WRZXWX'}
+  components:
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: download, font_size: null, font: '', spacing_above: none,
+      icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {}
+    event_bindings: {click: button_1_click}
+- type: Canvas
+  properties: {role: null, height: '750', tooltip: '', border: '', foreground: '',
+    visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: canvas_1
+  layout_properties: {grid_position: 'IAXJDK,PIFMEB'}
+  event_bindings: {reset: canvas_1_reset}
+is_package: true

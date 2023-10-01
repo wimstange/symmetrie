@@ -1,5 +1,6 @@
 from ._anvil_designer import WervelTemplate
 from anvil import *
+import anvil.server
 import math
 import anvil.media
 
@@ -43,6 +44,8 @@ class Wervel(WervelTemplate):
         """This method is called when the button is clicked"""
         self.teken_wervel(self.text_box_1.text)
 
+
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        pass
+        img = self.canvas_1.get_image()
+        anvil.media.download(img)

@@ -54,6 +54,7 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: ''}
     name: link_3
     layout_properties: {grid_position: 'GUVLAS,CAEPTV'}
+    event_bindings: {click: link_3_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Randversieringen, font_size: null, wrap_on: mobile, font: '',
