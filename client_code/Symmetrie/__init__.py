@@ -42,3 +42,43 @@ class Symmetrie(SymmetrieTemplate):
         
         self.content_panel.clear()
         self.content_panel.add_component(Cycloide())
+
+    def link_4_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+
+    def link_5_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+
+    def link_6_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar","Helaas ...")
+
+    def link_7_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar","Helaas ...")
+
+    def link_8_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+
+    def link_9_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+
+    def link_10_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+
+    def link_11_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+        
+
+
+
+
+
+
+
