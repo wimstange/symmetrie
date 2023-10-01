@@ -15,7 +15,7 @@ class Wervel(WervelTemplate):
         c = self.canvas_1
         c.clear_rect(0,0,self.canvas_1.get_width(),self.canvas_1.get_height()) 
         c.begin_path()
-        c.stroke_style = "#2196F3"
+        c.stroke_style = "rgba(0,0,0,1)"    # ""#2196F3"
         c.line_width = 1
         X = []
         Y = []
@@ -49,3 +49,7 @@ class Wervel(WervelTemplate):
         """This method is called when the button is clicked"""
         img = self.canvas_1.get_image()
         anvil.media.download(img)
+
+    def canvas_1_reset(self, **event_args):
+        """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
+        self.teken_wervel(self.text_box_1.text)

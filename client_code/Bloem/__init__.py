@@ -22,12 +22,19 @@ class Bloem(BloemTemplate):
 
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        img = self.canvas_1.get_image()
-        filename = 'bloem.jpg'  # Hier kunt u de gewenste bestandsnaam instellen
-        anvil.server.call('save_image_with_name', img, filename)
 
-          # img = self.canvas_1.get_image()
-          # anvil.media.download(img)
+        img = self.canvas_1.get_image()
+        anvil.media.download(img)
+
+        # gebruik makend van server module, een upgrade nodig?
+        # img = self.canvas_1.get_image()
+        # filename = 'bloem.jpg'  # Hier kunt u de gewenste bestandsnaam instellen
+        # anvil.server.call('save_image_with_name', img, filename)
+
+        # gebruik maken van een zelf gedefinieerde client functie, (nog?) niet geimpementeerd in anvil.works        
+        # img = self.canvas_1.get_image()
+        # filename = 'bloem.jpg'  # Hier kunt u de gewenste bestandsnaam instellen
+        # self.opslaan(img, filename)
 
     def canvas_1_reset(self, **event_args):
         """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
@@ -42,7 +49,7 @@ class Bloem(BloemTemplate):
         c = self.canvas_1
         c.clear_rect(0,0,self.canvas_1.get_width(),self.canvas_1.get_height()) 
         c.begin_path()
-        c.stroke_style = "#2196F3"
+        c.stroke_style = "rgba(0,0,0,1)"    # ""#2196F3"
         c.line_width = 1
         
         for k in range(N):
@@ -57,3 +64,7 @@ class Bloem(BloemTemplate):
                 c.line_to(X,Y)
                 
             c.stroke()
+
+    def opslaan(self,image,bestandsnaam):
+        with open(bestandsnaam, 'wb') as file:
+            file.write(image.get_bytes())
