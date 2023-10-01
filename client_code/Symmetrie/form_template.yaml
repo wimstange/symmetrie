@@ -9,12 +9,85 @@ components:
   layout_properties: {slot: default}
   components:
   - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Regelmatige structuren in de kunst, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: label_2
-    layout_properties: {grid_position: 'VLSGHU,LCQBLV'}
+    layout_properties: {grid_position: 'VLSGHU,LCQBLV', row_background: 'theme:Primary'}
+  - type: RichText
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: '<h1>Hans Lauwerier:
+        Een Pionier in Programmeren, Wiskunde en Kunst</h1>
+
+
+        <p>In de wereld van programmeren, wiskunde en kunst is Hans Lauwerier een
+        naam die bij velen bekend is. Geboren op 15 september 1943 in Nederland, heeft
+        deze veelzijdige persoonlijkheid aanzienlijke bijdragen geleverd aan deze
+        drie schijnbaar verschillende domeinen. Zijn werk heeft niet alleen geholpen
+        om de brug te slaan tussen deze disciplines, maar heeft ook hobbyisten geïnspireerd
+        om hun creativiteit en analytisch denken te combineren op unieke en boeiende
+        manieren.</p>
+
+
+        <h2>Een Levenslange Passie voor Symmetrie</h2>
+
+
+        <p>Hans Lauwerier staat vooral bekend om zijn werk op het gebied van symmetrie,
+        regelmatige structuren en tessellaties. Zijn boek "Symmetrie: Regelmatige
+        Structuren in de Kunst" is een klassieker in het veld en heeft duizenden mensen
+        geïnspireerd om de schoonheid van symmetrische patronen te verkennen. In dit
+        boek onderzoekt hij de diepgaande relaties tussen wiskunde en kunst door de
+        geschiedenis heen en laat hij zien hoe kunstenaars en ontwerpers gebruik hebben
+        gemaakt van symmetrie om verbluffende visuele effecten te creëren.</p>
+
+
+        <h2>Bruggen Slaan tussen Programmeren en Kunst</h2>
+
+
+        <p>Wat Hans Lauwerier echt opmerkelijk maakt, is zijn vermogen om de wereld
+        van programmeren te verbinden met de kunst. Hij heeft talloze projecten uitgevoerd
+        waarbij computerprogramma''s werden gebruikt om kunstwerken te genereren die
+        gebaseerd zijn op wiskundige principes. Zijn werk heeft de deur geopend voor
+        kunstenaars en programmeurs om samen te komen en te experimenteren met algoritmen
+        en visuele esthetiek. Zijn inzichten hebben bijgedragen aan de ontwikkeling
+        van generatieve kunst, waarbij computers worden gebruikt om kunstwerken te
+        maken op basis van vooraf gedefinieerde regels.</p>
+
+
+        <h2>Een Inspiratiebron voor Hobbyisten</h2>
+
+
+        <p>Voor hobbyisten die geïnteresseerd zijn in programmeren, wiskunde en kunst,
+        is Hans Lauwerier een ware inspiratiebron. Zijn werk laat zien dat deze disciplines
+        elkaar kunnen verrijken en versterken. Zijn benadering van symmetrie en regelmatige
+        structuren heeft velen aangemoedigd om hun creatieve grenzen te verleggen
+        en nieuwe manieren te vinden om wiskunde en kunst samen te laten smelten.</p>
+
+
+        <p>In een tijd waarin de grenzen tussen verschillende vakgebieden steeds vager
+        worden, is Hans Lauwerier''s erfenis een herinnering aan de kracht van interdisciplinair
+        denken. Zijn werk blijft hobbyisten en professionals inspireren om nieuwe
+        wegen te verkennen en de grenzen van hun eigen creativiteit te verleggen.</p>
+
+
+        <h2>Conclusie</h2>
+
+
+        <p>Hans Lauwerier is niet alleen een naam in de wereld van symmetrie, wiskunde
+        en kunst; hij is een pionier die de deuren heeft geopend naar nieuwe manieren
+        van denken en creëren. Zijn boek en zijn bijdragen aan generatieve kunst blijven
+        hobbyisten en kunstenaars inspireren om de magie van symmetrie en regelmatige
+        structuren te ontdekken en te omarmen. Hans Lauwerier''s nalatenschap zal
+        ongetwijfeld voortleven in de harten en geesten van degenen die zijn pad volgen
+        en nieuwe mogelijkheden verkennen in de wereld van programmeren, wiskunde
+        en kunst.</p>
+
+        ', font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+      format: restricted_html}
+    name: rich_text_1
+    layout_properties: {grid_position: 'DVWHQP,TFTMDO', row_background: 'theme:Primary
+        Container'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -63,3 +136,65 @@ components:
       icon: ''}
     name: link_4
     layout_properties: {grid_position: 'YVFOLS,LPKDXP'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Moskeeraam, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_5
+    layout_properties: {grid_position: 'QSQAKU,VVTGCH'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Kwadraattegel, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_6
+    layout_properties: {grid_position: 'UKHWKE,NLAHCH'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Stertegel, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '{}',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_7
+    layout_properties: {grid_position: 'ZDEPWL,AMTMUN'}
+    components: []
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Vijfhoektegel, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_8
+    layout_properties: {grid_position: 'DIWGWX,TJTRAW'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Katten, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_9
+    layout_properties: {grid_position: 'WGSVOO,GDNKNN'}
+    components: []
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Vissen, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_10
+    layout_properties: {grid_position: 'CJPVFY,VQHOAM'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Zeepaard, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_11
+    layout_properties: {grid_position: 'CVTYNM,JAGSAN'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Polyeder, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_12
+    layout_properties: {grid_position: 'REGUFM,BVOOZH'}
