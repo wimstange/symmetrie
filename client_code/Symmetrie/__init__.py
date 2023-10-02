@@ -5,6 +5,7 @@ import anvil.server
 from ..Bloem import Bloem
 from ..Wervel import Wervel
 from ..Cycloide import Cycloide
+from ..Moskeeraam import Moskeeraam
 
 class Symmetrie(SymmetrieTemplate):
     def __init__(self, **properties):
@@ -49,7 +50,15 @@ class Symmetrie(SymmetrieTemplate):
 
     def link_5_click(self, **event_args):
         """This method is called when the link is clicked"""
-        anvil.alert("Deze optie is nog niet beschikbaar",title="Helaas ...")
+        """This method is called when the link is clicked"""
+        self.link_1.role = ''
+        self.link_2.role = ''
+        self.link_3.role = ''
+        self.link_4.role = ''
+        self.link_5.role = 'selected'
+        
+        self.content_panel.clear()
+        self.content_panel.add_component(Cycloide())
 
     def link_6_click(self, **event_args):
         """This method is called when the link is clicked"""
