@@ -7,4 +7,5 @@ components:
     visible: true, spacing_above: small, spacing_below: small, background: ''}
   name: canvas_1
   layout_properties: {grid_position: 'CIBVXM,CZICMV'}
+  event_bindings: {reset: canvas_1_reset}
 is_package: true

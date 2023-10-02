@@ -1,6 +1,7 @@
 from ._anvil_designer import MoskeeraamTemplate
 from anvil import *
 import anvil.server
+import math
 
 class Moskeeraam(MoskeeraamTemplate):
     def __init__(self, **properties):
@@ -34,7 +35,16 @@ class Moskeeraam(MoskeeraamTemplate):
             for J in range(11):
                 X1 = 12+4*B+8*N1
                 Y1 = 8+6.93*N2
-                c.move_to()
+                c.move_to(X1+X[3*J]+1,Y1+Y[3*J]+K)
+                for K in range(2,3):
+                    c.line_to((X1+X[3*J+K],Y1+Y[3*J+K]))
+
+    def canvas_1_reset(self, **event_args):
+        """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
+        self.teken_moskeeraam()
+
+                    
+                
                 
             
                 
