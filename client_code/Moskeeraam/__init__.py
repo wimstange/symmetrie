@@ -19,8 +19,8 @@ class Moskeeraam(MoskeeraamTemplate):
         X, Y = [1,1,4], [0,3,3]
         for I in range(1,5):
             for N in range(1,3):
-                X[3*I+N]=X[N]*math.cos(math.PI*I)-Y[N]*math.sin(math.PI*I)
-                Y[3*I+N]=X[N]*math.sin(math.PI*I)+Y[N]*math.cos(math.PI*I)
+                X[3*I+N]=X[N]*math.cos(math.pi*I)-Y[N]*math.sin(math.pi*I)
+                Y[3*I+N]=X[N]*math.sin(math.pi*I)+Y[N]*math.cos(math.pi*I)
 
         for I in range(0,5):
             for N in range(1,3):
