@@ -22,5 +22,19 @@ class Moskeeraam(MoskeeraamTemplate):
                 Y[3*I+N]=X[N]*math.sin(math.PI*I)+Y[N]*math.cos(math.PI*I)
 
         for I in range(0,5):
+            for N in range(1,3):
+                X[3*(6+i)+N]=X[3*I+N]
+                Y[3*(6+i)+N]=-Y[3*I+N]
+        for N2 in range(6):
+            if N2 % 2 == 0:
+                B = 0
+            else:
+                B = 1
+        for N1 in range(7-B):
+            for J in range(11):
+                X1 = 12+4*B+8*N1
+                Y1 = 8+6.93*N2
+                c.move_to()
+                
             
                 
