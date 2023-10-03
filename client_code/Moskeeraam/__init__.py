@@ -20,8 +20,8 @@ class Moskeeraam(MoskeeraamTemplate):
         Y = [0,0,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         for I in range(1,5):
             for N in range(1,3):
-                X[3*I+N]=X[N]*math.cos(math.pi*I)-Y[N]*math.sin(math.pi*I)
-                Y[3*I+N]=X[N]*math.sin(math.pi*I)+Y[N]*math.cos(math.pi*I)
+                X[3*I+N]=X[N]*math.cos(math.pi*I/3)-Y[N]*math.sin(math.pi*I/3)
+                Y[3*I+N]=X[N]*math.sin(math.pi*I/3)+Y[N]*math.cos(math.pi*I/3)
 
         for I in range(0,5):
             for N in range(1,3):
@@ -36,9 +36,13 @@ class Moskeeraam(MoskeeraamTemplate):
             for J in range(11):
                 X1 = 12+4*B+8*N1
                 Y1 = 8+6.93*N2
-                c.move_to(25+25*(X1+X[3*J+1]),25+25*(Y1+Y[3*J+1]))
+                X2, Y2 = 10+10*(X1+X[3*J+1]), 10+10*(Y1+Y[3*J+1])
+                print("Van: (" , X2, Y2, ")")
+                c.move_to(X2,Y2)
                 for K in range(2,3):
-                    c.line_to((25+25*(X1+X[3*J+K]),25+25*(Y1+Y[3*J+K])))
+                    X2, Y2 = (10+10*(X1+X[3*J+K]) , 10+10*(Y1+Y[3*J+K]))
+                    print(X2,Y2)
+                    c.line_to(X2,Y2)
                     c.stroke()
         print(X)
         print(Y)
