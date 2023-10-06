@@ -6,6 +6,7 @@ from ..Bloem import Bloem
 from ..Wervel import Wervel
 from ..Cycloide import Cycloide
 from ..Moskeeraam import Moskeeraam
+from ..Stertegel import Stertegel
 
 class Symmetrie(SymmetrieTemplate):
     def __init__(self, **properties):
