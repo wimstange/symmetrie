@@ -34,3 +34,6 @@ class Cycloide(CycloideTemplate):
         """This method is called when the button is clicked"""
         img = self.canvas_1.get_image()
         anvil.media.download(img)
+
+ 
+
