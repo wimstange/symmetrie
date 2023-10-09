@@ -1,0 +1,8 @@
+container: {type: ColumnPanel}
+components:
+- name: canvas_1
+  properties: {height: '750'}
+  type: Canvas
+  layout_properties: {grid_position: 'FIKZHF,VEIYUP', full_width_row: true}
+  event_bindings: {reset: canvas_1_reset}
+is_package: true
