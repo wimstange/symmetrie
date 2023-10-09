@@ -3,9 +3,9 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Trip}
+startup: {type: form, module: Symmetrie}
 package_name: Symmetrie
-allow_embedding: false
+allow_embedding: true
 name: Symmetrie
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: Symmetrie - regelmatige structuren in de kunst, description: Veelsoortige motieven van decoratieve kunst met wiskundige principes.,
