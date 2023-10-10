@@ -56,9 +56,9 @@ class Trip(TripTemplate):
                     for K in range(2,M1+1):
                         P, Q = 150+10*(X1+X[J][K]),150+10*(Y1+Y[J][K])
                         c.line_to(P,Q)
-                        time.sleep(.5)
+                    
                         c.stroke()
-                    time.sleep(1)
+                
                         
 
     
