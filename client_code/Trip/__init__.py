@@ -1,6 +1,7 @@
 from ._anvil_designer import TripTemplate
 from anvil import *
 import anvil.server
+import time
 
 class Trip(TripTemplate):
     def __init__(self, **properties):
@@ -9,6 +10,12 @@ class Trip(TripTemplate):
 
         # Any code you write here will run before the form opens.
     def teken_paarden(self):
+        c = self.canvas_1
+        c.clear_rect(0,0,self.canvas_1.get_width(),self.canvas_1.get_height()) 
+        c.begin_path()
+        c.stroke_style = "rgba(0,0,0,1)"    # ""#2196F3"
+        c.line_width = 1
+
         M1, M2 = 27, 4
         X , Y = [[],[],[],[],[],[],[], []], [[],[],[],[],[],[],[], []]
         
@@ -35,15 +42,25 @@ class Trip(TripTemplate):
             X[6][N] = -0.5*X[1][N]-0.866*Y[1][N]+16
             Y[3][N] = 0.866*X[1][N]-0.6*Y[1][N]
 
-        c = self.canvas_1
-        c.clear_rect(0,0,self.canvas_1.get_width(),self.canvas_1.get_height()) 
-        c.begin_path()
-        c.stroke_style = "rgba(0,0,0,1)"    # ""#2196F3"
-        c.line_width = 1
-        c.move_to(10+10*X[1][1],10+10*Y[1][1])
-        for K in range(1,28):
-            c.line_to(10+10*X[1][K],10+10*Y[1][K])
-            c.stroke()
+        for N2 in range(-1,5+1):
+            if N2%2 == 0:
+                B = 0
+            else:
+                B = 1
+            for N1 in range(-1,5-B+1):
+                X1 = 4+8*B+16*N1
+                Y1 = 13.86*N2
+                for J in range(1,3+1):
+                    P, Q = 20+10*(X1+X[J][1]),100+10*(Y1+Y[J][1])
+                    c.move_to(P,Q)
+                    for K in range(2,M1+1):
+                        P, Q = 20+10*(X1+X[J][K]),100+10*(Y1+Y[J][K])
+                        c.line_to(P,Q)
+                    c.stroke()
+                    time.sleep(1)
+                        
+
+    
 
     def canvas_1_reset(self, **event_args):
         """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
