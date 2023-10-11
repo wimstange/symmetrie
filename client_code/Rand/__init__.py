@@ -7,11 +7,11 @@ class Rand(RandTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-
         # Any code you write here will run before the form opens.
+        
     def teken_randversieringen(self):
         
-        H, V, P, Q, N = 120, 90, 1, 1, math.int((H-16)/C)
+        H, V, P, Q, N = 120, 90, 1, 1, int((H-16)/C)
         c = self.canvas_1
         c.clear_rect(0,0,self.canvas_1.get_width(),self.canvas_1.get_height()) 
         c.begin_path()
@@ -43,15 +43,16 @@ class Rand(RandTemplate):
 
  
         
-        c.move_to(100+10*X[1],100+10*Y[1])
-        for K in range(2,10+1):
-            c.line_to(100+10*X[K],100+10*Y[K])
-            c.stroke()
+        # c.move_to(100+10*X[1],100+10*Y[1])
+        # for K in range(2,10+1):
+        #    c.line_to(100+10*X[K],100+10*Y[K])
+        #    c.stroke()
 
-    def teken_stuk(self):
-        c.move_to(C0*I+10+P*I[1],Q*Y[1])
-        for K in range(2,M+1):
-            c.line_to(C0*I+10+P*X[K],Q*Y[K])
+        def teken_stuk(self):
+            c.move_to(C0*I+10+P*I[1],Q*Y[1])
+            for K in range(2,M+1):
+                c.line_to(C0*I+10+P*X[K],Q*Y[K])
+            return
     
     def canvas_1_reset(self, **event_args):
         """This method is called when the canvas is reset and cleared, such as when the window resizes, or the canvas is added to a form."""
