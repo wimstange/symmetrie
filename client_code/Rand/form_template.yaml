@@ -1,0 +1,27 @@
+container: {type: ColumnPanel}
+components:
+- name: flow_panel_1
+  properties: {background: 'theme:Primary'}
+  type: FlowPanel
+  layout_properties: {grid_position: 'UOTOEJ,PRFDEH'}
+  components:
+  - name: label_1
+    properties: {text: '  Kies het type randversiering  ', background: 'theme:Primary
+        Container', icon_align: left_edge, align: center}
+    type: Label
+    layout_properties: {expand: false, width: 100}
+  - name: type
+    properties:
+      items: [T, TH, TV, TC, THV, G, GV]
+      spacing_above: small
+      spacing_below: none
+    type: DropDown
+    layout_properties: {}
+    event_bindings: {change: type_change}
+    data_bindings: []
+- name: canvas_1
+  properties: {height: '750', visible: true, spacing_above: none, spacing_below: none}
+  type: Canvas
+  layout_properties: {grid_position: 'CAHJYS,MLOKAQ'}
+  event_bindings: {reset: canvas_1_reset}
+is_package: true
