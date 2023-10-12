@@ -9,7 +9,7 @@ class Rand(RandTemplate):
         self.init_components(**properties)
         # Any code you write here will run before the form opens.
         self.M = 11
-        self.C = 12               # horizontale verplaatsing van het moetief
+        self.C = 10               # horizontale verplaatsing van het moetief
         self.C0 = self.C
         self.H, self.V, self.P, self.Q = 120, 90, 1, 1
         self.N = int((self.H-16)/self.C)
@@ -40,6 +40,9 @@ class Rand(RandTemplate):
         if self.type.selected_value== "TV":
             self.C0 = 2*self.C
             for I in range(1,self.N+1):
+                self.teken_stuk(I)
+                self.P = -self.P
+                self.teken_stuk(I)
                 
             print("Keuze TV")
         if self.type.selected_value == "TC":
@@ -61,10 +64,10 @@ class Rand(RandTemplate):
     def teken_stuk(self,I):
         c = self.canvas_1
         S , T = self.C0*I+10+self.P*self.X[1], self.Q*self.Y[1]
-        c.move_to(10+10*S,10+10*T)
+        c.move_to(-100+5*S,50+5*T)
         for K in range(2,self.M+1):
             S, T = self.C0*I+10+self.P*self.X[K], self.Q*self.Y[K]
-            c.line_to(10+10*S, 10+10*T)
+            c.line_to(-100+5*S, 50+5*T)
             c.stroke()
         return
     
