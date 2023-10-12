@@ -26,18 +26,21 @@ class Rand(RandTemplate):
  
         if self.type.selected_value == "T":
             self.C0 = self.C
-            for I in range(1,2*self.N):
+            for I in range(1,2*self.N+1):
                 self.teken_stuk(I)
             print("Keuze T")
         if self.type.selected_value == "TH":
             print("Keuze TH")
             self.C0 = self.C
-            for I in range(1,2*self.N):
+            for I in range(1,2*self.N+1):
                 self.teken_stuk(I)
                 self.Q = -self.Q
                 self.teken_stuk(I)
             
         if self.type.selected_value== "TV":
+            self.C0 = 2*self.C
+            for I in range(1,self.N+1):
+                
             print("Keuze TV")
         if self.type.selected_value == "TC":
             print("Keuze TC")
