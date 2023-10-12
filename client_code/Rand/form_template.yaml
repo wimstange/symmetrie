@@ -19,6 +19,16 @@ components:
     layout_properties: {}
     event_bindings: {change: type_change}
     data_bindings: []
+  - name: label_2
+    properties: {text: '  Andere translatieafstand  ', background: 'theme:Primary
+        Container'}
+    type: Label
+    layout_properties: {}
+  - name: text_box_1
+    properties: {text: '12', type: number}
+    type: TextBox
+    layout_properties: {width: 74}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
 - name: canvas_1
   properties: {height: '750', visible: true, spacing_above: none, spacing_below: none}
   type: Canvas
